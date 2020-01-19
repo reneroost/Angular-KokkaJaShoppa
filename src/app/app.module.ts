@@ -10,6 +10,7 @@ import { OstuNimekiriComponent } from './ostu-nimekiri/ostu-nimekiri.component';
 import { OstuMuutmineComponent } from './ostu-nimekiri/ostu-muutmine/ostu-muutmine.component';
 import { RetseptiDetailComponent } from './retseptid/retsepti-detail/retsepti-detail.component';
 import { RetseptiArtikkelComponent } from './retseptid/retseptid-nimekiri/retsepti-artikkel/retsepti-artikkel.component';
+import { RippmenuuDirective } from './jagatud/rippmenuu.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RetseptiArtikkelComponent } from './retseptid/retseptid-nimekiri/retsep
     OstuNimekiriComponent,
     OstuMuutmineComponent,
     RetseptiDetailComponent,
-    RetseptiArtikkelComponent
+    RetseptiArtikkelComponent,
+    RippmenuuDirective
   ],
   imports: [
     BrowserModule,
