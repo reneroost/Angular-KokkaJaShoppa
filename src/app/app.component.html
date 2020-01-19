@@ -1,10 +1,10 @@
-<app-pais></app-pais>
+<app-pais (sektsioonValitud)="onNavigeeri($event)"></app-pais>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-retseptid></app-retseptid>
+      <app-retseptid *ngIf="laaditudSektsioon === 'retsept'"></app-retseptid>
       <hr>
-      <app-ostu-nimekiri></app-ostu-nimekiri>
+      <app-ostu-nimekiri *ngIf="laaditudSektsioon === 'ostu-nimekiri'"></app-ostu-nimekiri>
     </div>
   </div>
 </div>

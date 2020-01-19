@@ -1,26 +1,15 @@
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn button-success">Uus retsept</button>
+        <button class="btn btn-success">Uus retsept</button>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <a href="#"
-        class="list-group-item clearfix"
-        *ngFor="let retsept of retseptid">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading">{{ retsept.nimi}}</h4>
-                <p class="list-group-item-text">{{ retsept.kirjeldus}}</p>
-            </div>
-            <span class="pull-right">
-                <img 
-                    [src] = "retsept.pildiTee"
-                    alt="{{ retsept.nimi }}" 
-                    class="img-responsive" 
-                    style="max-height: 50px;">
-            </span>
-        </a>
-        <app-retsepti-artikkel></app-retsepti-artikkel>
+        <app-retsepti-artikkel 
+            *ngFor="let retsept of retseptid"
+            [retseptiArtikkel]="retsept"
+            (retseptiEmitter)="onValiRetsept(retsept)">
+        </app-retsepti-artikkel>
     </div>
 </div>

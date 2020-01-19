@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Retsept } from '../retsept.model';
 
 @Component({
   selector: 'app-retsepti-detail',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./retsepti-detail.component.css']
 })
 export class RetseptiDetailComponent implements OnInit {
+  @Input() valitudRetsept: Retsept;
 
   constructor() { }
 

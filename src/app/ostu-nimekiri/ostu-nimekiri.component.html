@@ -1,6 +1,8 @@
 <div class="row">
     <div class="col-xs-10">
-        <app-ostu-muutmine></app-ostu-muutmine>
+        <app-ostu-muutmine
+        (koostisosaLisatud)="onKoostisosaLisatud($event)"></app-ostu-muutmine
+            >
         <hr>
         <ul class="list-group">
             <a 

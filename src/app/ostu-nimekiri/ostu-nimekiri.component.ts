@@ -18,4 +18,8 @@ export class OstuNimekiriComponent implements OnInit {
   ngOnInit() {
   }
 
+  onKoostisosaLisatud(koostisosa: Koostisosa) {
+    this.koostisosad.push(koostisosa);
+  }
+
 }

@@ -1,13 +1,14 @@
 <div class="row">
-    <div class="col-md-5">
-        <app-retseptid-nimekiri>
-
+    <div class="col-sm-5">
+        <app-retseptid-nimekiri (valitudRetsept)="valitudRetsept = $event">
         </app-retseptid-nimekiri>
     </div>
-    <div class="col-md-7">
-        <app-retsepti-detail>
-
-
+    <div class="col-sm-7">
+        <app-retsepti-detail 
+        *ngIf="valitudRetsept; else infoTekst" [valitudRetsept]="valitudRetsept">
         </app-retsepti-detail>
+        <ng-template #infoTekst>
+            <p>Palun vali retsept</p>
+        </ng-template>
     </div>
 </div>
